@@ -1,0 +1,57 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.4
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: Nov 04, 2012 at 10:56 PM
+-- Server version: 5.1.44
+-- PHP Version: 5.3.1
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Database: `flight`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `flight`
+--
+
+CREATE TABLE IF NOT EXISTS `flight` (
+  `flight` varchar(45) NOT NULL,
+  `airfirm` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `start` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `destination` varchar(45) CHARACTER SET utf8 NOT NULL,
+  `leaveTime` varchar(45) NOT NULL,
+  `arriveTime` varchar(45) NOT NULL,
+  `childFare` varchar(45) NOT NULL,
+  `adultFare` varchar(45) NOT NULL,
+  `discount1` varchar(45) NOT NULL,
+  `discount2` varchar(45) NOT NULL,
+  `seat` varchar(45) NOT NULL,
+  `week` varchar(45) NOT NULL,
+  `remark` int(11) NOT NULL,
+  PRIMARY KEY (`remark`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `flight`
+--
+
+INSERT INTO `flight` (`flight`, `airfirm`, `start`, `destination`, `leaveTime`, `arriveTime`, `childFare`, `adultFare`, `discount1`, `discount2`, `seat`, `week`, `remark`) VALUES
+('MU5660', 'CEAir', 'Dalian', 'Shanghai', '0730', '0910', '1000', '2000', '.95', '1', '134', '1357', 1),
+('CA1969', 'AirChina', 'Shanghai', 'Guilin', '1550', '1825', '88', '3000', '.9', '1', '175', '246', 2),
+('CZ6953', 'CSAir', 'Dalian', 'Urumchi', '0815', '1430', '2160', '2840', '.8', '1', '112', '356', 3),
+('MU5322', 'CEAir', 'Guilin', 'Shanghai', '1055', '1255', '380', '460', '.4', '1', '175', '246', 4),
+('MU5669', 'CEAir', 'Shanghai', 'Dalian', '1725', '1925', '250', '330', '.3', '1', '112', '356', 5),
+('CZ6954', 'CSAir', 'Urumchi', 'Dalian', '1530', '2100', '2840', '2840', '1', '1', '112', '356', 6),
+('CA1234', 'CITY', 'DL', 'TJ', '0200', '0400', '1000.0', '8000.0', '0.7', '0.5', '23', '123', 7),
+('CA1234', 'CITY', 'DL', 'TJ', '0200', '0400', '1000.0', '8000.0', '0.7', '0.5', '23', '123', 8);
